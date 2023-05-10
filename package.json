@@ -1,0 +1,16 @@
+{
+  "name": "healthprogram",
+  "version": "1.0.0",
+  "description": "Health program who is going to help people to lose or gain or maintain weight",
+  "main": "healthMesures.js",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
