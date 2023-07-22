@@ -1,4 +1,4 @@
-import Person from "./person";
+import Person from "./person"
 
 let leandro = new Person();
 let result = leandro.amountOfCalories();
