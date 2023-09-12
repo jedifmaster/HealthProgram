@@ -1,5 +1,5 @@
-import Person from "./person"
+import Person from './person';
 
-let leandro = new Person();
-let result = leandro.amountOfCalories();
-console.log(result)
+const leandro = new Person();
+const result = leandro.amountOfCalories();
+console.log(result);
