@@ -1,4 +1,5 @@
-import readlineSync from 'readline-sync';
+import { getInputFromUserOrEnv } from './inputs';
+
 
 export default class Person {
 	name: any;
@@ -11,16 +12,14 @@ export default class Person {
 	kgToLoseOrgain: any;
 
 	constructor() {
-		this.name = readlineSync.question('Enter your name: ');
-		this.age = readlineSync.question('Enter your age: ');
-		this.heigth = readlineSync.question('Enter your height(cm): ');
-		this.weigth = readlineSync.question('Enter your weight(Kg): ');
-		this.gender = readlineSync.question('Enter you gender: ');
-		this.activity = readlineSync.question(
-			'Please enter sedentary (1), slightly active (2), moderately active (3), very active (4), or extremely active (5): '
-		);
-		this.objective = readlineSync.question('Please enter your objective, loss weigth(1), gain weigth(2) , maintain weigth(3): ');
-		this.kgToLoseOrgain = readlineSync.question('Please enter number of kg to loss or gain per week: ');
+		this.name = getInputFromUserOrEnv('NAME', 'Enter your name: ');
+		this.age = getInputFromUserOrEnv('AGE', 'Enter your age: ');
+		this.heigth = getInputFromUserOrEnv('HEIGTH', 'Enter your height(cm): ');
+		this.weigth = getInputFromUserOrEnv('WEIGTH', 'Enter your weight(Kg): ');
+		this.gender = getInputFromUserOrEnv('GENDER', 'Enter your gender: ');
+		this.activity = getInputFromUserOrEnv('ACTIVITY', 'Please enter sedentary (1), slightly active (2), moderately active (3), very active (4), or extremely active (5): ');
+		this.objective = getInputFromUserOrEnv('OBJECTIVE', 'Please enter your objective, loss weight(1), gain weight(2), maintain weight(3): ');
+		this.kgToLoseOrgain = getInputFromUserOrEnv('KGTOLOSEORGAIN', 'Please enter number of kg to lose or gain per week: ');
 	}; 
 
 	amountOfCalories() {
